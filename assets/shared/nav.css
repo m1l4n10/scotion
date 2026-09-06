@@ -1,0 +1,108 @@
+.navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 70px;
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    background-color: rgba(255, 255, 255, 0.74);
+    backdrop-filter: blur(3px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-item {
+    padding-top: 5px;
+    height: 70%;
+    width: 10%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.nav-item-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 10%;
+    border-radius: 10px;
+}
+
+.nav-item.active svg, .nav-item-add.active svg, .nav-item.active span {
+    fill: #ec0e3f;
+}
+
+.nav-item-add:hover {
+    background-color: #f0f0f0;
+}
+
+.nav-item:hover{
+    background-color: #f0f0f0;
+}
+
+.nav-item svg {
+    padding-bottom: 5px;
+    flex-shrink: 0;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+
+.nav-item a:hover {
+    text-decoration: underline;
+}
+
+.text-break {
+    white-space: nowrap;
+    word-break: normal;
+    overflow-wrap: normal;
+}
+@media (max-width: 830px) {
+    .navbar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 70px;
+        width: 95%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        bottom: 15px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav-item {
+        padding-top: 5px;
+        height: 70%;
+        width: 20%;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #000;
+        padding-bottom: 5px;
+    }
+
+
+    .nav-item-add.active {
+        width: 20%;
+    }
+}

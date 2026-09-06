@@ -1,0 +1,258 @@
+.timetable  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 120px;
+}
+
+.container {
+    display: flex;
+    width: min(720px, 90%);
+    height: 100%;
+    flex-direction: column;
+}
+
+.hero {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.timetable-scroll {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.timetable-table {
+    width: 100%;
+    min-width: 660px;
+    border-collapse: separate;
+    border-spacing: 3px 4px;
+    table-layout: fixed;
+    color: #000;
+}
+
+.time-column {
+    width: 74px;
+}
+
+.day-column {
+    width: auto;
+}
+
+.timetable-table th,
+.timetable-table td {
+    border-right: 1px solid #e0e0e0;
+}
+
+.timetable-table thead th {
+    border: 0;
+    font-weight: 400;
+}
+
+.month-row th {
+    height: 28px;
+    text-align: left;
+    font-size: 13px;
+}
+
+.month-row th[colspan] {
+    padding-left: 10px;
+}
+
+.day-row th {
+    height: 28px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.date-row th {
+    height: 48px;
+    font-size: 20px;
+    text-align: center;
+    color: #666;
+}
+
+.timetable-table tbody tr:not(.break-row) {
+    height: 64px;
+}
+
+.timetable-table tbody td {
+    padding: 5px 8px;
+    vertical-align: top;
+    border-top: 0;
+    border-bottom: 0;
+    font-size: 13px;
+    border-left: 4px solid transparent;
+    border-radius: 3px;
+    transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.timetable-table tbody td:empty {
+    border: 1px solid #eee;
+    background: #fff;
+}
+
+.timetable-table .break-row td {
+    border: 0;
+    background: transparent;
+}
+
+.timetable-table tbody td:not(:empty):hover {
+    position: relative;
+    z-index: 1;
+    outline: 3px solid #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
+    transform: translateY(-1px);
+}
+
+.subject-bi { background: #dff5e3; border-left-color: #2db84d !important; color: #267c38; }
+.subject-en, .subject-bk { background: #ffe8e8; border-left-color: #f12b35 !important; color: #c51e28; }
+.subject-ek { background: #e2f2fb; border-left-color: #1596d1 !important; color: #16719e; }
+.subject-ph, .subject-inf, .subject-er { background: #f1e7fb; border-left-color: #9239e8 !important; color: #8031c9; }
+.subject-fr { background: #f7eee9; border-left-color: #c88970 !important; color: #95624f; }
+.subject-ma { background: #d9f5f6; border-left-color: #08b8c4 !important; color: #087f89; }
+.subject-ge { background: #fbe7f0; border-left-color: #df0870 !important; color: #bd1265; }
+.subject-de { background: #fff1c9; border-left-color: #e9aa00 !important; color: #896300; }
+.subject-ch { background: #e9efff; border-left-color: #4169e1 !important; color: #3455b4; }
+.subject-spj { background: #d9f5f1; border-left-color: #0ab39c !important; color: #087d6d; }
+
+.timetable-table tbody td strong,
+.timetable-table tbody td span,
+.timetable-table tbody td small {
+    display: block;
+}
+
+.timetable-table tbody td strong {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.timetable-table tbody td small {
+    margin-top: 3px;
+    font-size: 12px;
+}
+
+.time {
+    border-right: 1px solid #ddd;
+    font-size: 11px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.time span,
+.time strong {
+    display: block;
+}
+
+.time strong {
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+.break-row {
+    height: 20px;
+}
+
+.break-row th,
+.break-row td {
+    border: 0;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+}
+
+@media (max-width: 830px) {
+    .container {
+        width: calc(100% - 10px);
+    }
+
+    .hero {
+        padding-top: 10px;
+        padding-bottom: 12px;
+        font-size: 24px;
+    }
+
+    .timetable-scroll {
+        overflow-x: hidden;
+    }
+
+    .timetable-table {
+        width: 100%;
+        min-width: 0;
+        border-spacing: 2px 3px;
+    }
+
+    .time-column {
+        width: 48px;
+    }
+
+    .month-row th {
+        height: 22px;
+        font-size: 11px;
+    }
+
+    .month-row th[colspan] {
+        padding-left: 4px;
+    }
+
+    .day-row th {
+        height: 24px;
+        font-size: 10px;
+    }
+
+    .date-row th {
+        height: 38px;
+        font-size: 19px;
+    }
+
+    .timetable-table tbody tr:not(.break-row) {
+        height: 58px;
+    }
+
+    .timetable-table tbody td {
+        padding: 4px 5px;
+        font-size: 11px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .timetable-table tbody td strong {
+        overflow: hidden;
+        font-size: 15px;
+        margin-bottom: 4px;
+        text-overflow: ellipsis;
+    }
+
+    .timetable-table tbody td span,
+    .timetable-table tbody td small {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .timetable-table tbody td small {
+        margin-top: 2px;
+        font-size: 10px;
+    }
+
+    .time {
+        font-size: 9px;
+        white-space: nowrap;
+    }
+
+    .time strong {
+        margin: 4px 0;
+        font-size: 14px;
+    }
+
+    .break-row {
+        height: 18px;
+    }
+
+    .break-row td {
+        height: 18px;
+    }
+}
