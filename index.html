@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/shared/nav.css">
     <link rel="stylesheet" href="assets/shared/shared.css">
     <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/assignmenttimer.css">
 </head>
 <body>
     <nav class="navbar">
@@ -40,20 +41,43 @@
             </div>
             <div style="height: 20px"></div>
             <div class="hero-small">
-                <span>Dashboard</span>
+                <span>Dashboard - Welcome back Milan</span>
             </div>
             <div class="dashboard">
                 <div class="dashboard-card-large">
-                    <span>Next Assignments:</span>
-                    <span class="assignment">
-                        type: <a class="type">class test</a><br>
-                        due: <a class="duedate">21.1.2027</a><br>
-                        subject: <a class="subject">English</a><br> 
-                        topics: <a class="topics">description</a></span>
+                    <span style="font-weight: bold;">Next Assignments:</span>
+                    <div style="height: 5px"></div>
+                    <div class="assignment">
+                        <div class="assignment-row">
+                            <span class="assignment-label">type</span>
+                            <a class="type">class test</a>
+                        </div>
+                        <div class="assignment-row">
+                            <span class="assignment-label">due</span>
+                            <a class="duedate">08.09.2026</a>
+                        </div>
+                        <div class="assignment-row">
+                            <span class="assignment-label">subject</span>
+                            <a class="subject">Math</a>
+                        </div>
+                        <div class="assignment-row">
+                            <span class="assignment-label">topics</span>
+                            <a class="topics">Expand and simplify expressions, apply binomial formulas.</a>
+                        </div>
+                    </div>
+                    <div style="height: 5px"></div>
+                    <label class="status-control" for="assignment-status">
+                        <span class="status-label">Status:</span>
+                        <select id="assignment-status" name="assignment-status">
+                            <option value="in-progress" selected>In progress</option>
+                            <option value="not-started">Not started yet</option>
+                            <option value="finished">Finished</option>
+                        </select>
+                    </label>
                 </div>
-                <div class="dashboard-card-small">
-                    <span>Next Assigment Due:</span>
-                    <span">00:00:00</span>
+                <div class="dashboard-card-small assignment-timer-card">
+                    <span class="assignment-timer-label">Next Assignment Due:</span>
+                    <span id="assignment-countdown" class="assignment-countdown" aria-live="polite">Calculating...</span>
                 </div>
             </div>
             
@@ -67,26 +91,40 @@
                     <th>Topics</th>
                 </tr>
                 <tr>
-                    <td>Test</td>
-                    <td>07.09.2026</td>
-                    <td>IT</td>
-                    <td>Writing Codeblocks on paper</td>
-                </tr>
-                <tr>
                     <td>Class Test</td>
                     <td>08.09.2026</td>
                     <td>Math</td>
-                    <td>Description</td>
+                    <td>Expand and simplify expressions, apply binomial formulas.</td>
                 </tr>
                 <tr>
                     <td>Class Test</td>
                     <td>09.09.2026</td>
                     <td>German</td>
-                    <td>Description</td>
+                    <td>short stories, calendarstories, summaries.</td>
+                </tr>
+                <tr>
+                    <td>Class test</td>
+                    <td>30.09.2026</td>
+                    <td>France</td>
+                    <td>Topics havent been announced yet.</td>
+                </tr>
+                <tr>
+                    <td>Class Test</td>
+                    <td>04.10.2026</td>
+                    <td>English</td>
+                    <td>Topics havent been announced yet.</td>
+                </tr>
+                <tr>
+                    <td>Class Test</td>
+                    <td>04.11.2026</td>
+                    <td>German</td>
+                    <td>Topics havent been announced yet.</td>
                 </tr>
             </table>
         </div>
         
     </section>
+    <script src="assets/js/status.js"></script>
+    <script src="assets/js/assignmenttimer.js"></script>
 </body>
 </html>

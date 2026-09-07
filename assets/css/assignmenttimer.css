@@ -1,0 +1,26 @@
+.assignment-timer-card {
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: #f8fafc;
+}
+
+.assignment-timer-label {
+    color: #475569;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.assignment-countdown {
+    color: #0f172a;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+@media (max-width: 830px) {
+    .assignment-countdown {
+        font-size: 16px;
+    }
+}
